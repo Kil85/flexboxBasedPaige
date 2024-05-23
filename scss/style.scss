@@ -18,7 +18,6 @@ html {
 body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.6rem;
-	background-color: black;
 }
 
 .burger-btn {
@@ -33,8 +32,8 @@ body {
 
 	&:focus {
 		outline: none;
-		border-radius: 5px;
 		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 5px;
 	}
 
 	&:hover {
@@ -69,5 +68,44 @@ body {
 		top: 27px;
 		width: 30%;
 		transition-delay: 0.1s;
+	}
+}
+
+// HEADER
+
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	height: 75vh;
+	padding: 2em;
+	color: colors.$pure-white;
+	@include mixins.heroImages("../img/header-mini.jpg");
+	background-attachment: scroll;
+
+	&__heading {
+		font-family: "Dancing Script", cursive;
+		font-size: 4.8rem;
+		font-weight: 300;
+	}
+
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4em;
+		background: colors.$pure-white;
+		border: none;
+		border-radius: 8px;
+		color: colors.$dark;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::before {
+			background-color: colors.$light-white;
+		}
 	}
 }
