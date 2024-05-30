@@ -8,7 +8,7 @@ $(document).ready(function () {
 		mobileFirst: true,
 		responsive: [
 			{
-				breakpoint: 700,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
