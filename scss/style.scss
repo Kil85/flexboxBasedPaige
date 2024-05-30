@@ -309,6 +309,68 @@ body {
 	}
 }
 
+// OFFERS
+
+.offers {
+	position: relative;
+	@include mixins.heroImages("../img/offers-hero-small.jpg");
+	overflow: hidden;
+
+	.section-heading {
+		color: colors.$pure-white;
+	}
+
+	&__option {
+		margin: 1em 0;
+		box-shadow: 5px 5px 10px #2e2e2e2e;
+		background-color: colors.$pure-white;
+		overflow: hidden;
+
+		&-img {
+			width: 100%;
+			overflow: hidden;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		&-info {
+			padding: 2em;
+			background-color: colors.$pure-white;
+			z-index: 10;
+		}
+
+		&-heading {
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.3em;
+			color: colors.$dark;
+		}
+
+		&-btn {
+			margin-top: 1em;
+			padding: 0.8em;
+			width: 100%;
+			color: colors.$pure-white;
+			background-color: colors.$main-color;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+
+			&::before {
+				background-color: colors.$secondary-color;
+			}
+		}
+	}
+}
+
 // ====================================
 // MEDIA
 // ====================================
@@ -338,6 +400,36 @@ body {
 		&__img {
 			margin-bottom: 0;
 			max-height: 300px;
+		}
+	}
+
+	.offers {
+		&__option {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+
+			&-img {
+				width: 100%;
+				height: auto;
+
+				&--right {
+					order: 1;
+				}
+			}
+
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			&-heading {
+				margin-bottom: 0.5em;
+				font-size: 3.6rem;
+			}
+			&-btn {
+				padding: 1em;
+			}
 		}
 	}
 }
@@ -442,6 +534,20 @@ body {
 		hr {
 			width: 60%;
 			max-width: 900px;
+		}
+	}
+
+	.offers {
+		background-image: colors.$blue-gradient, url("/img/offers-hero-big.jpg");
+
+		&__option {
+			&-img {
+				object-fit: cover;
+				height: 300px;
+			}
+			&-text {
+				font-size: 1.5rem;
+			}
 		}
 	}
 }
